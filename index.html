@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENERADOR INFORMES SIEMGE</title>
+    <style>
+        /* Estilos CSS */
+        /* Los estilos del formulario y la tabla pueden ser ajustados según tus preferencias */
+        /* Se proporciona solo un ejemplo básico */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        /* Estilos de la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="C:\Users\Programador\Desktop\python\daniela\images\1.png" alt="Foto de Perfil">
+            <h2>Daniela Fuentes</h2>
+        </div>
+        <form id="client-form" action="/generate_report" method="post">
+            <div class="form-group">
+                <label for="cliente">CLIENTE:</label>
+                <input type="text" id="cliente" name="nombre_cliente">
+            </div>
+            <div class="form-group">
+                <label for="direccion">DIRECCIÓN:</label>
+                <input type="text" id="direccion" name="direccion_empresa">
+            </div>
+            <div class="form-group">
+                <label for="direccion">CIUDAD:</label>
+                <input type="text" id="ciudad" name="ciudad_empresa">
+            </div>
+            <!-- Agrega aquí los demás campos del formulario -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parámetro</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Batería(s) en reposo</td>
+                        <td><input type="text" name="bateria" id="bateria"></td>
+                    </tr>
+                    <tr>
+                        <td>Alternador de carga de batería(s)</td>
+                        <td><input type="text" name="alternador" id="alternador"></td>
+                    </tr>
+                    <tr>
+                        <td>Voltage trifásico L1</td>
+                        <td><input type="text" name="vl1" id="vl1"></td>
+                    </tr>
+                    <tr>
+                        <td>Voltage trifásico L2</td>
+                        <td><input type="text" name="vl2" id="vl2"></td>
+                    </tr>
+
+                    </tr>
+                    <tr>
+                    <td>Voltage trifásico L3</td>
+                    <td><input type="text" name="vl3" id="vl3"></td>
+                </tr>
+                    <!-- Agrega más filas según los parámetros -->
+                </tbody>
+            </table>
+            <button type="submit" class="btn">Generar Informe</button>
+        </form>
+    </div>
+</body>
+</html>
